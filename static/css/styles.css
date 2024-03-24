@@ -1,0 +1,20 @@
+body {
+  background-color: #101010;
+  color: white;
+}
+
+li {
+  border-radius: 1rem;
+  background-color: gainsboro;
+  color: black;
+  padding: 0.5rem 1rem;
+}
+
+.done {
+  background-color: lightgreen;
+}
+
+img {
+  max-width: 320px;
+  width: 100%;
+}
