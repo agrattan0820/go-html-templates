@@ -7,14 +7,8 @@ import (
 	"net/http"
 )
 
-type Todo struct {
-	Title string
-	Done  bool
-}
-
-type TodoPageData struct {
+type HomepageData struct {
 	PageTitle string
-	Todos     []Todo
 }
 
 func main() {
@@ -26,13 +20,8 @@ func main() {
 
 	// Templates https://gowebexamples.com/templates/
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		data := TodoPageData{
-			PageTitle: "TODO List",
-			Todos: []Todo{
-				{Title: "Eat dinner", Done: false},
-				{Title: "Drink coffee", Done: true},
-				{Title: "Do laundry", Done: true},
-			},
+		data := HomepageData{
+			PageTitle: "VizTreks",
 		}
 
 		tmpl.Execute(w, data)
