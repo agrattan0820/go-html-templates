@@ -12,7 +12,7 @@ type HomepageData struct {
 }
 
 func main() {
-	tmpl, err := template.ParseFiles("layout.html")
+	tmpl, err := template.ParseFiles("./views/layout.html")
 
 	if err != nil {
 		log.Fatal(err)
