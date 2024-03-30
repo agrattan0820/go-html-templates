@@ -8,8 +8,6 @@ const marginRight = 20;
 const marginBottom = 30;
 const marginLeft = 40;
 
-console.log("LOADED!!!");
-
 // Declare the x (horizontal position) scale
 const x = d3
   .scaleUtc()
