@@ -28,8 +28,8 @@ func main() {
 	})
 
 	// Static folder https://gowebexamples.com/static-files/
-	fs := http.FileServer(http.Dir("static/"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets/"))))
+	http.Handle("/dist/", http.StripPrefix("/dist/", http.FileServer(http.Dir("dist/"))))
 
 	fmt.Println("Serving at http://localhost:8080")
 

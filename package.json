@@ -2,19 +2,19 @@
   "name": "go-html-templates",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "esbuild ./src/scripts/** ./src/styles/** --bundle --outdir=dist --watch",
+    "build": "esbuild ./src/scripts/** ./src/styles/** --bundle --outdir=dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/d3": "^7.4.3",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.7"
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.3"
   },
   "dependencies": {
     "d3": "^7.9.0"
